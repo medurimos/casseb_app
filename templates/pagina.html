@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cálculo das Raízes da Equação Quadrática</title>
+</head>
+<body>
+    <h1>Cálculo das Raízes da Equação Quadrática</h1>
+
+    <p>Insira os valores para a equação quadrática ax² + bx + c = 0</p>
+
+    <!-- Formulário para inserir os valores de a, b e c -->
+    <form action="/" method="POST">
+        <label for="a">Valor de a:</label>
+        <input type="number" step="any" name="a" id="a" placeholder="Digite o valor de a" required>
+        <br><br>
+
+        <label for="b">Valor de b:</label>
+        <input type="number" step="any" name="b" id="b" placeholder="Digite o valor de b" required>
+        <br><br>
+
+        <label for="c">Valor de c:</label>
+        <input type="number" step="any" name="c" id="c" placeholder="Digite o valor de c" required>
+        <br><br>
+
+        <button type="submit">Calcular Raízes</button>
+    </form>
+
+    <!-- Exibe o resultado se disponível -->
+    {% if resultado %}
+        <h2>Resultado:</h2>
+        <div>{{ resultado }}</div>
+    {% endif %}
+</body>
+</html>
